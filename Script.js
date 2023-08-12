@@ -52,9 +52,18 @@
             console.log("Closed Super Like dialog");
         }
     };
-
+    
+    var clickMaybeLater = function() {
+        var maybeLaterButton = document.querySelector('button[class="button Lts($ls-s) Z(0) CenterAlign Mx(a) Cur(p) Tt(u) Ell Bdrs(100px) Px(24px) Px(20px)--s Py(0) Mih(40px) C($c-light-gray) C($c-gray):h Fw($semibold) focus-button-style D(b) My(20px) Mx(a)"]');
+        if (maybeLaterButton) {
+           maybeLaterButton.click();
+           console.log("Closed Mabye Later dialog");
+        }
+    };
+    
     var like = function() {
         closeSuperLike();
+        clickMaybeLater();
         muteAudio();
         var likeButton = [...document.querySelectorAll('button[type="button"]')].find(
             button => button.innerHTML.includes('M21.994 10.225c0-3.598-2.395-6.212-5.72-6.212-1.78 0-2.737')
